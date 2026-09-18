@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "후반에 스킬 포인트가 남아도는데 찍을 곳이 없습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"스킬 포인트가 남아도 스킬을 찍을 곳이 없음\",\n  \"reproSteps\": [\n    \"후반에 스킬 포인트가 남아 있음\",\n    \"스킬을 찍을 수 있는 UI 요소가 없음\"\n  ]\n}"
+  }
+]

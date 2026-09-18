@@ -25,12 +25,14 @@ const RUN_NAME = arg("name", "baseline");
 const REPS = Number(arg("reps", "1"));
 const BASE = arg("base", "http://localhost:3000");
 const CASE_TIMEOUT_MS = Number(arg("timeout", "120000"));
+// 어떤 케이스 세트로 잴지. holdout.json 은 프롬프트 튜닝에 쓰지 않은 검증용.
+const CASES_FILE = arg("cases", "cases.json");
 
 const CATEGORIES = ["bug", "balance", "ux", "other"];
 const SEVERITIES = ["critical", "major", "minor"];
 
 // ---------- 준비 ----------
-const data = JSON.parse(readFileSync(join(here, "cases.json"), "utf8"));
+const data = JSON.parse(readFileSync(join(here, CASES_FILE), "utf8"));
 const outDir = join(here, "runs", RUN_NAME);
 const tracesDir = join(outDir, "traces");
 mkdirSync(tracesDir, { recursive: true });
@@ -88,6 +90,7 @@ let provider = null;
 let model = null;
 
 console.log(`케이스 ${data.cases.length}개 × ${REPS}회 = ${total}건`);
+console.log(`세트: ${CASES_FILE}`);
 console.log(`대상: ${BASE}/api/classify`);
 console.log(`결과: ${outDir}\n`);
 
@@ -262,6 +265,7 @@ writeFileSync(
   JSON.stringify(
     {
       run: RUN_NAME,
+      cases_file: CASES_FILE,
       provider,
       model,
       cases: data.cases.length,

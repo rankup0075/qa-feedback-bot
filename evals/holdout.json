@@ -1,0 +1,25 @@
+{
+  "flow": "classify",
+  "description": "검증용(held-out) 세트. 프롬프트 튜닝에 한 번도 쓰지 않은 케이스만 담는다. 여기 점수가 cases.json 점수와 비슷하면 진짜 실력이고, 크게 낮으면 33개에 과적합된 것이다. 이 파일을 보고 프롬프트를 고치는 순간 검증 세트로서의 가치가 사라진다.",
+  "policy_ref": "cases.json 의 policy 를 그대로 따른다. 기준이 바뀌면 양쪽을 같이 고칠 것.",
+  "cases": [
+    { "id": "h01", "input": "레이드 2페이즈 진입할 때 화면이 검게 변하고 그대로 멈춥니다. 강제 종료밖에 방법이 없어요.", "expected": { "category": "bug", "severity": "critical" }, "tags": ["bug", "쉬움"] },
+    { "id": "h02", "input": "길드 창고에 아이템을 넣었는데 목록에 안 보입니다. 다시 접속하니 나타나긴 했어요.", "expected": { "category": "bug", "severity": "major" }, "tags": ["bug", "보통"], "note": "재접속이라는 조치를 취해야 했으므로 major" },
+    { "id": "h03", "input": "달리다가 계단을 오를 때 캐릭터가 순간적으로 공중에 뜹니다.", "expected": { "category": "bug", "severity": "minor" }, "tags": ["bug", "보통"] },
+    { "id": "h04", "input": "파티원 체력바가 실제 체력과 다르게 표시됩니다. 죽기 직전인데 절반으로 보여요.", "expected": { "category": "bug", "severity": "major" }, "tags": ["bug", "어려움"], "note": "UI가 언급되지만 원인은 값 불일치. 잘못된 판단으로 실제 손해" },
+    { "id": "h05", "input": "옵션에서 자막 크기를 바꿔도 적용이 안 됩니다. 저장은 되는데 게임에선 그대로예요.", "expected": { "category": "bug", "severity": "major" }, "tags": ["bug", "어려움"], "note": "설정 화면 이야기지만 기능이 동작하지 않음" },
+    { "id": "h06", "input": "무기 도감에서 이미 획득한 무기 아이콘이 잠금 상태로 나옵니다.", "expected": { "category": "bug", "severity": "minor" }, "tags": ["bug", "보통"] },
+
+    { "id": "h07", "input": "5스테이지 이후로 적 숫자가 갑자기 두 배가 됩니다. 여기서 계속 막혀요.", "expected": { "category": "balance", "severity": "major" }, "tags": ["balance", "쉬움"] },
+    { "id": "h08", "input": "낚시 미니게임 보상이 걸리는 시간에 비해 너무 적어서 아무도 안 할 것 같아요.", "expected": { "category": "balance", "severity": "minor" }, "tags": ["balance", "보통"], "note": "안 하면 그만이라 플레이가 막히지 않음" },
+    { "id": "h09", "input": "후반에 스킬 포인트가 남아도는데 찍을 곳이 없습니다.", "expected": { "category": "balance", "severity": "minor" }, "tags": ["balance", "어려움"] },
+
+    { "id": "h10", "input": "장비 비교 창에서 어느 쪽이 지금 착용 중인지 표시가 없어 헷갈립니다.", "expected": { "category": "ux", "severity": "minor" }, "tags": ["ux", "어려움"], "note": "표시 누락이지만 잘못 구매/장착했다는 언급이 없어 minor" },
+    { "id": "h11", "input": "파티 모집 글 올리는 버튼을 못 찾아서 30분을 헤맸습니다. 결국 커뮤니티를 검색해서 알았어요.", "expected": { "category": "ux", "severity": "major" }, "tags": ["ux", "보통"], "note": "외부 검색이라는 우회 조치를 취함" },
+    { "id": "h12", "input": "퀘스트 보상 목록이 아이콘만 나와서 마우스를 올려봐야 뭔지 알 수 있습니다.", "expected": { "category": "ux", "severity": "minor" }, "tags": ["ux", "보통"] },
+
+    { "id": "h13", "input": "보스 등장 연출에서 초당 프레임이 확 떨어집니다.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "어려움"], "note": "성능 보고는 other. 연출 구간이라 플레이가 막히지 않아 minor" },
+    { "id": "h14", "input": "'획득하였읍니다'라고 나오는데 '획득하였습니다'가 맞습니다.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "쉬움"] },
+    { "id": "h15", "input": "캐릭터 커스터마이징에 헤어스타일이 더 많았으면 좋겠어요.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "쉬움"] }
+  ]
+}

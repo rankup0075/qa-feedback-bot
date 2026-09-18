@@ -5,7 +5,8 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const data = JSON.parse(readFileSync(join(here, "cases.json"), "utf8"));
+const SET = process.argv.includes("--set") ? process.argv[process.argv.indexOf("--set") + 1] : "cases.json";
+const data = JSON.parse(readFileSync(join(here, SET), "utf8"));
 
 // 앱의 카테고리 색과 동일 (dataviz 검증기로 라이트/다크 모두 통과시킨 조합)
 const COLOR = {
@@ -49,18 +50,30 @@ const rows = data.cases
   )
   .join("");
 
-const policyRows = Object.entries(data.policy.category)
-  .map(
-    ([k, v]) =>
-      `<tr><td><span class="chip" style="background:${COLOR[k]}">${CAT_KO[k]}</span></td><td>${esc(v)}</td></tr>`,
-  )
-  .join("");
+// holdout.json 처럼 policy를 cases.json에서 참조만 하는 세트도 있다.
+const policy = data.policy ?? null;
 
-const sevRows = Object.entries(data.policy.severity)
-  .map(([k, v]) => `<tr><td><span class="sev sev-${k}">${SEV_KO[k]}</span></td><td>${esc(v)}</td></tr>`)
-  .join("");
+const policySection = policy
+  ? `
+  <h2>라벨링 기준 &mdash; 카테고리</h2>
+  <div class="panel"><table><tbody>${Object.entries(policy.category)
+    .map(
+      ([k, v]) =>
+        `<tr><td><span class="chip" style="background:${COLOR[k]}">${CAT_KO[k]}</span></td><td>${esc(v)}</td></tr>`,
+    )
+    .join("")}</tbody></table></div>
 
-const noteItems = data.policy.notes.map((n) => `<li>${esc(n)}</li>`).join("");
+  <h2>라벨링 기준 &mdash; 심각도</h2>
+  <div class="panel"><table><tbody>${Object.entries(policy.severity)
+    .map(
+      ([k, v]) =>
+        `<tr><td><span class="sev sev-${k}">${SEV_KO[k]}</span></td><td>${esc(v)}</td></tr>`,
+    )
+    .join("")}</tbody></table></div>
+
+  <h2>애매한 경우에 대한 결정</h2>
+  <div class="panel"><ul>${policy.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul></div>`
+  : `<div class="panel">라벨링 기준은 <code>${esc(data.policy_ref ?? "cases.json")}</code> 를 따릅니다.</div>`;
 
 const summaryChips = [
   ...Object.entries(catCounts).map(
@@ -117,14 +130,7 @@ const html = `<!doctype html>
   <p class="sub">${data.cases.length}개 · 이 표의 &ldquo;정답&rdquo;이 맞는지 확인해줘. 여기서 승인한 기준으로 점수가 매겨져.</p>
   <div class="chips">${summaryChips}</div>
 
-  <h2>라벨링 기준 &mdash; 카테고리</h2>
-  <div class="panel"><table><tbody>${policyRows}</tbody></table></div>
-
-  <h2>라벨링 기준 &mdash; 심각도</h2>
-  <div class="panel"><table><tbody>${sevRows}</tbody></table></div>
-
-  <h2>애매한 경우에 대한 결정</h2>
-  <div class="panel"><ul>${noteItems}</ul></div>
+  ${policySection}
 
   <h2>케이스 ${data.cases.length}개</h2>
   <table>
@@ -143,7 +149,7 @@ const html = `<!doctype html>
 </html>
 `;
 
-const out = join(here, "review.html");
+const out = join(here, SET === "cases.json" ? "review.html" : `${SET.replace(/\.json$/, "")}-review.html`);
 writeFileSync(out, html, "utf8");
 console.log(`생성: ${out}`);
 console.log(`케이스 ${data.cases.length}개`);
