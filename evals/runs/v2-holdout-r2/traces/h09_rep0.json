@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "후반에 스킬 포인트가 남아도는데 찍을 곳이 없습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"스킬 포인트가 남아도 스킬을 선택할 수 없는 버그\",\n  \"reproSteps\": [\n    \"후반에 스킬 포인트가 남아 있는 상태로 게임 진행\",\n    \"스킬을 선택할 수 있는 UI가 없거나 위치가 잘못 되어 있는 상태\"\n  ]\n}"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "run": "v2-47",
+  "cases_file": "cases.json",
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "cases": 47,
+  "reps": 1,
+  "rows": 47,
+  "errors": 0,
+  "category_accuracy": 0.9148936170212766,
+  "severity_accuracy": 0.8723404255319149,
+  "both_accuracy": 0.7872340425531915,
+  "category_ci95": 0.07977622981305293,
+  "avg_latency_s": 1.9408510638297871,
+  "at": "2026-09-18T21:49:57.211Z"
+}

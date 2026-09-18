@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "보스 등장 연출에서 초당 프레임이 확 떨어집니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"보스 등장 시 프레임 저하\",\n  \"reproSteps\": [\n    \"보스가 등장할 때\",\n    \"프레임이 떨어진다\"\n  ]\n}"
+  }
+]

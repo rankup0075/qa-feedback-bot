@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "후반엔 포션이 남아돌아서 안 쓰게 됩니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"minor\",\n  \"summary\": \"포션이 남아돌아 쓰지 못하는 문제\",\n  \"reproSteps\": [\n    \"게임 후반부에 도달\",\n    \"포션이 남아돌아 사용하지 못함\"\n  ]\n}"
+  }
+]

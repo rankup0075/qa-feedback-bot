@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "희귀 재료 드랍률이 체감 1% 미만이라 파밍이 고통스럽습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"희귀 재료 드랍률이 너무 낮아 파밍이 고통스럽다\",\n  \"reproSteps\": [\n    \"특정 지역에서 희귀 재료를 수집하다\",\n    \"드랍률이 낮아 지속적으로 실패함\",\n    \"파밍이 지루하고 불만을 느끼다\"\n  ]\n}"
+  }
+]

@@ -42,8 +42,8 @@
 <body>
 <div class="wrap">
   <h1>분류 정확도 테스트 케이스</h1>
-  <p class="sub">33개 · 이 표의 &ldquo;정답&rdquo;이 맞는지 확인해줘. 여기서 승인한 기준으로 점수가 매겨져.</p>
-  <div class="chips"><span class="chip" style="background:#ec003f">버그 13</span> <span class="chip" style="background:#009E73">기타 7</span> <span class="chip" style="background:#e17100">밸런스 7</span> <span class="chip" style="background:#0084d1">사용성 6</span> <span class="sev sev-critical">치명적 4</span> <span class="sev sev-major">중요 13</span> <span class="sev sev-minor">경미 16</span> <span class="plain">쉬움 7</span> <span class="plain">어려움 10</span> <span class="plain">보통 16</span></div>
+  <p class="sub">47개 · 이 표의 &ldquo;정답&rdquo;이 맞는지 확인해줘. 여기서 승인한 기준으로 점수가 매겨져.</p>
+  <div class="chips"><span class="chip" style="background:#ec003f">버그 17</span> <span class="chip" style="background:#009E73">기타 9</span> <span class="chip" style="background:#e17100">밸런스 11</span> <span class="chip" style="background:#0084d1">사용성 10</span> <span class="sev sev-critical">치명적 4</span> <span class="sev sev-major">중요 20</span> <span class="sev sev-minor">경미 23</span> <span class="plain">쉬움 7</span> <span class="plain">어려움 17</span> <span class="plain">보통 23</span></div>
 
   
   <h2>라벨링 기준 &mdash; 카테고리</h2>
@@ -55,7 +55,7 @@
   <h2>애매한 경우에 대한 결정</h2>
   <div class="panel"><ul><li>성능 저하(프레임 드랍, 멈칫거림)는 other로 본다. 최적화 문제인지 보고자의 PC 사양 문제인지 확인되기 전에는 결함으로 단정할 수 없기 때문. 사양 정보를 받아본 뒤 최적화 문제로 확인되면 그때 bug로 올린다.</li><li>오타와 번역 오류는 other로 본다. 게임 로직은 정상이므로.</li><li>'버튼을 눌러도 반응이 없다'는 ux가 아니라 bug다. 찾기 어려운 것과 눌러도 안 되는 것은 다르다.</li><li>재접속이나 재시작으로 풀리면 critical이 아니라 major다. 데이터가 남아있기 때문.</li></ul></div>
 
-  <h2>케이스 33개</h2>
+  <h2>케이스 47개</h2>
   <table>
     <thead><tr><th>#</th><th>피드백</th><th>카테고리</th><th>심각도</th><th>난이도</th><th>메모</th></tr></thead>
     <tbody>
@@ -322,6 +322,118 @@
         <td><span class="sev sev-minor">경미</span></td>
         <td class="diff">어려움</td>
         <td class="note">읽기 불편처럼 들려 ux로 새기 쉬움. 현지화 품질 문제라 other</td>
+      </tr>
+      <tr>
+        <td class="id">c34</td>
+        <td class="input">상점 NPC 옷 색이 프리뷰와 다르게 나옵니다.</td>
+        <td><span class="chip" style="background:#ec003f">버그</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">결함이지만 플레이어가 한 조치가 없음</td>
+      </tr>
+      <tr>
+        <td class="id">c35</td>
+        <td class="input">상점에서 산 아이템이 인벤토리에 안 들어옵니다. 재접속하니 들어와 있었어요.</td>
+        <td><span class="chip" style="background:#ec003f">버그</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c34와 같은 상점 소재. 재접속이라는 조치가 있어 major</td>
+      </tr>
+      <tr>
+        <td class="id">c36</td>
+        <td class="input">달리다 방향을 바꿀 때 애니메이션이 살짝 끊깁니다.</td>
+        <td><span class="chip" style="background:#ec003f">버그</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">보기에만 거슬림</td>
+      </tr>
+      <tr>
+        <td class="id">c37</td>
+        <td class="input">방향 전환하면 가끔 조작이 먹통이 돼서 다시 눌러야 합니다.</td>
+        <td><span class="chip" style="background:#ec003f">버그</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c36과 같은 방향 전환 소재. 다시 눌러야 했으므로 major</td>
+      </tr>
+      <tr>
+        <td class="id">c38</td>
+        <td class="input">채집 미니게임 보상이 짜서 안 하게 되네요.</td>
+        <td><span class="chip" style="background:#e17100">밸런스</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">선택 콘텐츠. 안 해도 진행에 지장 없음</td>
+      </tr>
+      <tr>
+        <td class="id">c39</td>
+        <td class="input">메인 퀘스트 보상이 짜서 다음 장비를 못 삽니다. 따로 파밍해야 넘어가요.</td>
+        <td><span class="chip" style="background:#e17100">밸런스</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c38과 같은 보상량 소재. 파밍이라는 우회 조치가 필요해 major</td>
+      </tr>
+      <tr>
+        <td class="id">c40</td>
+        <td class="input">후반엔 포션이 남아돌아서 안 쓰게 됩니다.</td>
+        <td><span class="chip" style="background:#e17100">밸런스</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">수치가 남는 쪽. 아무 조치도 필요 없음</td>
+      </tr>
+      <tr>
+        <td class="id">c41</td>
+        <td class="input">후반엔 포션이 모자라서 매번 마을로 돌아가야 합니다.</td>
+        <td><span class="chip" style="background:#e17100">밸런스</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c40과 정확히 같은 포션 소재, 방향만 반대. 되돌아가는 조치가 있어 major</td>
+      </tr>
+      <tr>
+        <td class="id">c42</td>
+        <td class="input">로딩 화면 팁 글씨가 작아서 잘 안 읽힙니다.</td>
+        <td><span class="chip" style="background:#0084d1">사용성</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">읽기 불편하지만 플레이가 멈추지 않음</td>
+      </tr>
+      <tr>
+        <td class="id">c43</td>
+        <td class="input">재화 단위 표기가 없어서 0을 잘못 세고 아이템을 헐값에 팔았습니다.</td>
+        <td><span class="chip" style="background:#0084d1">사용성</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c42와 같은 표시 문제. 실제 손해가 발생해 major</td>
+      </tr>
+      <tr>
+        <td class="id">c44</td>
+        <td class="input">메뉴마다 UI 폰트가 조금씩 다릅니다.</td>
+        <td><span class="chip" style="background:#0084d1">사용성</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">일관성 지적. 조치 없음</td>
+      </tr>
+      <tr>
+        <td class="id">c45</td>
+        <td class="input">확인/취소 버튼 위치가 화면마다 바뀌어서 잘못 눌러 아이템을 버렸습니다.</td>
+        <td><span class="chip" style="background:#0084d1">사용성</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c44와 같은 일관성 문제. 실제 손해가 발생해 major</td>
+      </tr>
+      <tr>
+        <td class="id">c46</td>
+        <td class="input">엔딩 크레딧에서 프레임이 떨어집니다.</td>
+        <td><span class="chip" style="background:#009E73">기타</span></td>
+        <td><span class="sev sev-minor">경미</span></td>
+        <td class="diff">어려움</td>
+        <td class="note">성능 보고. 플레이가 아닌 구간이라 조치 없음</td>
+      </tr>
+      <tr>
+        <td class="id">c47</td>
+        <td class="input">전투 중 프레임이 떨어져서 조작이 밀립니다. 그것 때문에 여러 번 죽었어요.</td>
+        <td><span class="chip" style="background:#009E73">기타</span></td>
+        <td><span class="sev sev-major">중요</span></td>
+        <td class="diff">보통</td>
+        <td class="note">c46과 같은 성능 소재. 죽고 다시 해야 했으므로 major</td>
       </tr></tbody>
   </table>
 

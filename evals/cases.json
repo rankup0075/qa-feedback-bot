@@ -56,6 +56,27 @@
     { "id": "c30", "input": "도전과제 목록을 한눈에 볼 수 있는 기능이 있으면 좋겠습니다.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "어려움"], "note": "기능 제안. 없는 기능을 원하는 것이므로 ux 불편과 구분" },
     { "id": "c31", "input": "영어판에서 'Attack'이 '공격력'으로 번역돼 있는데 문맥상 '공격'이 맞습니다.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "보통"], "note": "번역 오류. 로직은 정상이라 other" },
     { "id": "c32", "input": "배경음악이 정말 좋네요. 사운드트랙 따로 판매할 계획 있나요?", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "쉬움"], "note": "문제 보고가 아닌 칭찬/문의" },
-    { "id": "c33", "input": "한글 폰트가 영문 폰트보다 작게 나와서 어색합니다. 크기만 맞춰주면 좋겠어요.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "어려움"], "note": "읽기 불편처럼 들려 ux로 새기 쉬움. 현지화 품질 문제라 other" }
+    { "id": "c33", "input": "한글 폰트가 영문 폰트보다 작게 나와서 어색합니다. 크기만 맞춰주면 좋겠어요.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "어려움"], "note": "읽기 불편처럼 들려 ux로 새기 쉬움. 현지화 품질 문제라 other" },
+
+    { "id": "c34", "input": "상점 NPC 옷 색이 프리뷰와 다르게 나옵니다.", "expected": { "category": "bug", "severity": "minor" }, "tags": ["bug", "어려움"], "pair": "c35", "note": "결함이지만 플레이어가 한 조치가 없음" },
+    { "id": "c35", "input": "상점에서 산 아이템이 인벤토리에 안 들어옵니다. 재접속하니 들어와 있었어요.", "expected": { "category": "bug", "severity": "major" }, "tags": ["bug", "보통"], "pair": "c34", "note": "c34와 같은 상점 소재. 재접속이라는 조치가 있어 major" },
+
+    { "id": "c36", "input": "달리다 방향을 바꿀 때 애니메이션이 살짝 끊깁니다.", "expected": { "category": "bug", "severity": "minor" }, "tags": ["bug", "어려움"], "pair": "c37", "note": "보기에만 거슬림" },
+    { "id": "c37", "input": "방향 전환하면 가끔 조작이 먹통이 돼서 다시 눌러야 합니다.", "expected": { "category": "bug", "severity": "major" }, "tags": ["bug", "보통"], "pair": "c36", "note": "c36과 같은 방향 전환 소재. 다시 눌러야 했으므로 major" },
+
+    { "id": "c38", "input": "채집 미니게임 보상이 짜서 안 하게 되네요.", "expected": { "category": "balance", "severity": "minor" }, "tags": ["balance", "어려움"], "pair": "c39", "note": "선택 콘텐츠. 안 해도 진행에 지장 없음" },
+    { "id": "c39", "input": "메인 퀘스트 보상이 짜서 다음 장비를 못 삽니다. 따로 파밍해야 넘어가요.", "expected": { "category": "balance", "severity": "major" }, "tags": ["balance", "보통"], "pair": "c38", "note": "c38과 같은 보상량 소재. 파밍이라는 우회 조치가 필요해 major" },
+
+    { "id": "c40", "input": "후반엔 포션이 남아돌아서 안 쓰게 됩니다.", "expected": { "category": "balance", "severity": "minor" }, "tags": ["balance", "어려움"], "pair": "c41", "note": "수치가 남는 쪽. 아무 조치도 필요 없음" },
+    { "id": "c41", "input": "후반엔 포션이 모자라서 매번 마을로 돌아가야 합니다.", "expected": { "category": "balance", "severity": "major" }, "tags": ["balance", "보통"], "pair": "c40", "note": "c40과 정확히 같은 포션 소재, 방향만 반대. 되돌아가는 조치가 있어 major" },
+
+    { "id": "c42", "input": "로딩 화면 팁 글씨가 작아서 잘 안 읽힙니다.", "expected": { "category": "ux", "severity": "minor" }, "tags": ["ux", "어려움"], "pair": "c43", "note": "읽기 불편하지만 플레이가 멈추지 않음" },
+    { "id": "c43", "input": "재화 단위 표기가 없어서 0을 잘못 세고 아이템을 헐값에 팔았습니다.", "expected": { "category": "ux", "severity": "major" }, "tags": ["ux", "보통"], "pair": "c42", "note": "c42와 같은 표시 문제. 실제 손해가 발생해 major" },
+
+    { "id": "c44", "input": "메뉴마다 UI 폰트가 조금씩 다릅니다.", "expected": { "category": "ux", "severity": "minor" }, "tags": ["ux", "어려움"], "pair": "c45", "note": "일관성 지적. 조치 없음" },
+    { "id": "c45", "input": "확인/취소 버튼 위치가 화면마다 바뀌어서 잘못 눌러 아이템을 버렸습니다.", "expected": { "category": "ux", "severity": "major" }, "tags": ["ux", "보통"], "pair": "c44", "note": "c44와 같은 일관성 문제. 실제 손해가 발생해 major" },
+
+    { "id": "c46", "input": "엔딩 크레딧에서 프레임이 떨어집니다.", "expected": { "category": "other", "severity": "minor" }, "tags": ["other", "어려움"], "pair": "c47", "note": "성능 보고. 플레이가 아닌 구간이라 조치 없음" },
+    { "id": "c47", "input": "전투 중 프레임이 떨어져서 조작이 밀립니다. 그것 때문에 여러 번 죽었어요.", "expected": { "category": "other", "severity": "major" }, "tags": ["other", "보통"], "pair": "c46", "note": "c46과 같은 성능 소재. 죽고 다시 해야 했으므로 major" }
   ]
 }

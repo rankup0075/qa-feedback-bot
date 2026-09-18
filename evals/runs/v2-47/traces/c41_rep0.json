@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "후반엔 포션이 모자라서 매번 마을로 돌아가야 합니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"후반에 포션이 부족해 매번 마을로 돌아가야 함\",\n  \"reproSteps\": [\n    \"게임 후반부에 도달\",\n    \"포션이 부족해 전투에 참여할 수 없음\",\n    \"마을로 돌아가 포션을 구매해야 함\"\n  ]\n}"
+  }
+]

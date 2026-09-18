@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "무기 도감에서 이미 획득한 무기 아이콘이 잠금 상태로 나옵니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"major\",\n  \"summary\": \"이미 획득한 무기 아이콘이 도감에서 잠금 상태로 표시됨\",\n  \"reproSteps\": [\n    \"무기 도감을 열고\",\n    \"이미 획득한 무기 아이콘을 확인\"\n  ]\n}"
+  }
+]

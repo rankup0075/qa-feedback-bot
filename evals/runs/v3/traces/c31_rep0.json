@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "영어판에서 'Attack'이 '공격력'으로 번역돼 있는데 문맥상 '공격'이 맞습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"공격 버튼의 번역이 '공격력'으로 잘못 되어 있음\",\n  \"reproSteps\": []\n}"
+  }
+]

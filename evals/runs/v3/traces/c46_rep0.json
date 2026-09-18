@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "엔딩 크레딧에서 프레임이 떨어집니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"엔딩 크레딧 시 프레임 끊김\",\n  \"reproSteps\": [\n    \"엔딩 크레딧을 보여주는 시점에서 게임을 실행\"\n  ]\n}"
+  }
+]

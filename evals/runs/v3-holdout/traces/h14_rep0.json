@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "'획득하였읍니다'라고 나오는데 '획득하였습니다'가 맞습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"문구 오류로 인한 불편함\",\n  \"reproSteps\": []\n}"
+  }
+]

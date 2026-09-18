@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "메뉴마다 UI 폰트가 조금씩 다릅니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"메뉴별 UI 폰트가 다릅니다\",\n  \"reproSteps\": [\n    \"메뉴를 선택하고\",\n    \"각 메뉴의 폰트를 확인합니다\"\n  ]\n}"
+  }
+]

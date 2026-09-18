@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "캐릭터 커스터마이징에 헤어스타일이 더 많았으면 좋겠어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"헤어스타일 옵션 부족에 대한 의견\",\n  \"reproSteps\": []\n}"
+  }
+]

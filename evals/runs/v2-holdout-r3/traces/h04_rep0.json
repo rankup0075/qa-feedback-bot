@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "파티원 체력바가 실제 체력과 다르게 표시됩니다. 죽기 직전인데 절반으로 보여요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"critical\",\n  \"summary\": \"파티원 체력바가 실제 체력과 다르게 표시됨\",\n  \"reproSteps\": [\n    \"파티원을 전투 중에 전투에 참여시킴\",\n    \"파티원이 죽기 직전 상태에 도달함\",\n    \"체력바를 확인함\"\n  ]\n}"
+  }
+]

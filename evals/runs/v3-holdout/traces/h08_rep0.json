@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "낚시 미니게임 보상이 걸리는 시간에 비해 너무 적어서 아무도 안 할 것 같아요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"낚시 미니게임 보상이 걸리는 시간에 비해 너무 적어 참여도가 낮아질 것 같아요\",\n  \"reproSteps\": []\n}"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "죽었을 때 뜨는 안내 문구가 너무 빨리 사라져서 못 읽었어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"사망 시 안내 문구가 너무 빨리 사라져 내용을 읽지 못함\",\n  \"reproSteps\": [\n    \"플레이어가 죽는 상황 발생\",\n    \"사망 시 뜨는 안내 문구 확인\",\n    \"문구가 짧은 시간 후 사라짐\"\n  ]\n}"
+  }
+]

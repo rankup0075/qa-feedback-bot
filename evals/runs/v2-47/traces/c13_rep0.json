@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "마을 분수대 물 텍스처가 한 칸 어긋나 있어요. 플레이엔 지장 없습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"minor\",\n  \"summary\": \"마을 분수대 물 텍스처가 한 칸 이동해 보이네요\",\n  \"reproSteps\": [\n    \"마을 분수대를 보면 물 텍스처가 한 칸 어긋나 있습니다.\"\n  ]\n}"
+  }
+]

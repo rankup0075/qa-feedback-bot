@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "인벤토리를 정렬하면 아이콘이 잠깐 깜빡입니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"minor\",\n  \"summary\": \"인벤토리 정렬 시 아이콘 잠시 깜빡임\",\n  \"reproSteps\": [\n    \"인벤토리 열기\",\n    \"아이템을 정렬 모드로 전환\",\n    \"아이콘 변화 관찰\"\n  ]\n}"
+  }
+]

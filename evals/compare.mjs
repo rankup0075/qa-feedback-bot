@@ -30,15 +30,17 @@ const padL = (s, w) => String(s).padStart(w);
 const W = 16; // "97.0% (+12.1)" 가 들어갈 폭
 const LINE = 14 + W * 3 + 7 + 12;
 
-// 세트가 다르면 점수를 나란히 비교할 수 없다. 세트별로 나눠서 보여준다.
+// 세트가 다르면 점수를 나란히 비교할 수 없다. 파일이 같아도 케이스를 추가하면
+// 다른 세트다 — 같은 그룹에 두면 증감이 엉터리가 된다.
 const bySet = new Map();
 for (const r of runs) {
-  const set = r.cases_file ?? "cases.json";
-  if (!bySet.has(set)) bySet.set(set, []);
-  bySet.get(set).push(r);
+  const key = `${r.cases_file ?? "cases.json"}@${r.cases}`;
+  if (!bySet.has(key)) bySet.set(key, []);
+  bySet.get(key).push(r);
 }
 
-for (const [set, group] of bySet) {
+for (const [key, group] of bySet) {
+  const set = key.split("@")[0];
   const isHoldout = set !== "cases.json";
   console.log(
     `\n${isHoldout ? "검증 세트" : "튜닝 세트"} — ${set} (${group[0].cases}개)\n` +

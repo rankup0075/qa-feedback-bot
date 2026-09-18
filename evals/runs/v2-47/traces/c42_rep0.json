@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "로딩 화면 팁 글씨가 작아서 잘 안 읽힙니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"로딩 화면 팁 글씨 크기 문제\",\n  \"reproSteps\": [\n    \"로딩 화면을 보여주는 상태에서 팁 텍스트를 확인한다.\"\n  ]\n}"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "run": "v3-holdout",
+  "cases_file": "holdout.json",
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "cases": 15,
+  "reps": 1,
+  "rows": 15,
+  "errors": 0,
+  "category_accuracy": 0.9333333333333333,
+  "severity_accuracy": 0.7333333333333333,
+  "both_accuracy": 0.6666666666666666,
+  "category_ci95": 0.12623599298902796,
+  "avg_latency_s": 1.8840000000000003,
+  "at": "2026-09-18T21:55:07.867Z"
+}

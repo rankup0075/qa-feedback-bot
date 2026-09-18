@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "상점 NPC 옷 색이 프리뷰와 다르게 나옵니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"minor\",\n  \"summary\": \"상점 NPC 옷 색이 프리뷰와 다르게 표시됨\",\n  \"reproSteps\": [\n    \"상점 NPC의 옷을 선택하거나 살펴보기\",\n    \"프리뷰 이미지와 실제 표시된 색이 다름\"\n  ]\n}"
+  }
+]

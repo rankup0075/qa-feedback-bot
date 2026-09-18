@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "채집 미니게임 보상이 짜서 안 하게 되네요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"채집 미니게임 보상이 부족해 플레이를 자제하고 있음\",\n  \"reproSteps\": [\n    \"채집 미니게임을 진행하려고 시도함\",\n    \"보상이 기대보다 낮다고 느끼고 게임을 중단함\"\n  ]\n}"
+  }
+]

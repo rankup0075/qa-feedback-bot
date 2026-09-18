@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "미니맵이 너무 작아서 방향을 알기 어렵습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"미니맵 크기 문제로 방향 인식 어려움\",\n  \"reproSteps\": [\n    \"미니맵을 확인한다\",\n    \"미니맵의 크기와 위치를 살펴본다\",\n    \"방향을 파악하려고 시도한다\"\n  ]\n}"
+  }
+]

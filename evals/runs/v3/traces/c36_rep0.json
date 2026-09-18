@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "달리다 방향을 바꿀 때 애니메이션이 살짝 끊깁니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"minor\",\n  \"summary\": \"방향 전환 시 애니메이션이 끊기는 현상\",\n  \"reproSteps\": [\n    \"달리기 상태에서 방향을 바꿉니다.\",\n    \"애니메이션이 살짝 끊기는지 확인합니다.\"\n  ]\n}"
+  }
+]
