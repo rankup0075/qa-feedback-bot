@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "보스방 입구 기둥에 끼면 움직일 수가 없어요. 재접속해야 풀립니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"major\",\n  \"summary\": \"보스방 입구 기둥에 끼면 움직일 수 없어 재접속 필요\",\n  \"reproSteps\": [\n    \"보스방 입구에 접근\",\n    \"기둥에 끼는 위치에 들어가기\",\n    \"움직임이 제한되는지 확인\"\n  ]\n}"
+  }
+]

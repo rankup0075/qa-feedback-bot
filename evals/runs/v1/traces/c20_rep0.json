@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "튜토리얼 구간이 너무 쉬워서 지루했어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"튜토리얼 구간 난이도가 너무 낮아 지루함\",\n  \"reproSteps\": []\n}"
+  }
+]

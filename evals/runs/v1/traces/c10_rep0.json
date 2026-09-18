@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "2단 점프가 가끔 씹혀요. 5번에 1번 정도 두 번째 점프가 안 나갑니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"major\",\n  \"summary\": \"2단 점프가 가끔 씹혀서 두 번째 점프가 안 나감\",\n  \"reproSteps\": [\n    \"5번에 1번 정도 2단 점프 시도\",\n    \"두 번째 점프가 정상적으로 작동하지 않음\"\n  ]\n}"
+  }
+]

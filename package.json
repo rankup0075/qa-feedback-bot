@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "eval": "node evals/run.mjs",
-    "eval:review": "node evals/make-review.mjs"
+    "eval:review": "node evals/make-review.mjs",
+    "eval:compare": "node evals/compare.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.126.0",

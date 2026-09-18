@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "배경음악이 정말 좋네요. 사운드트랙 따로 판매할 계획 있나요?"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"배경음악에 대한 호감 및 사운드트랙 판매 문의\",\n  \"reproSteps\": []\n}"
+  }
+]

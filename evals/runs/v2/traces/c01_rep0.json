@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "세이브 파일이 통째로 사라졌어요. 3시간 진행한 게 없어졌습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"critical\",\n  \"summary\": \"세이브 파일이 완전히 삭제되어 3시간 분량의 진행도가 사라짐\",\n  \"reproSteps\": []\n}"
+  }
+]

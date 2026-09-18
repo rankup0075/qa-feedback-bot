@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "맵을 열 때마다 1초쯤 멈췄다가 열립니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"major\",\n  \"summary\": \"맵 열 때마다 1초간 멈춤\",\n  \"reproSteps\": [\n    \"게임을 실행하고 맵을 열 때\",\n    \"1초간 멈춘 후 맵이 열림\"\n  ]\n}"
+  }
+]

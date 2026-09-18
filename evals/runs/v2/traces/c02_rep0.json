@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "3챕터 다리 건너는 컷신에서 무조건 게임이 튕깁니다. 10번 시도했는데 다 똑같아요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"critical\",\n  \"summary\": \"3챕터 다리 건너는 컷신에서 게임이 튕김\",\n  \"reproSteps\": [\n    \"3챕터 진입\",\n    \"다리 건너는 컷신 실행 시도\",\n    \"게임이 튕김\"\n  ]\n}"
+  }
+]

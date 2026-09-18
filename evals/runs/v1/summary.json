@@ -1,0 +1,15 @@
+{
+  "run": "v1",
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "cases": 33,
+  "reps": 1,
+  "rows": 33,
+  "errors": 0,
+  "category_accuracy": 0.9696969696969697,
+  "severity_accuracy": 0.7575757575757576,
+  "both_accuracy": 0.7272727272727273,
+  "category_ci95": 0.05848710844108898,
+  "avg_latency_s": 1.8542424242424247,
+  "at": "2026-09-18T21:20:26.093Z"
+}

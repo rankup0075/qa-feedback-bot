@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "회복 물약 가격이 너무 싸서 긴장감이 없어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"회복 물약 가격이 너무 낮아 긴장감 부족\",\n  \"reproSteps\": []\n}"
+  }
+]
