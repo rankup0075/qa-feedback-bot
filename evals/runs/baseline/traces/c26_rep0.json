@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "퀘스트 목록에서 어떤 게 메인이고 어떤 게 서브인지 구분이 안 됩니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"퀘스트 목록에서 메인과 서브 구분이 불분명합니다.\",\n  \"reproSteps\": [\n    \"퀘스트 목록 화면으로 이동\",\n    \"메인 퀘스트와 서브 퀘스트를 확인\"\n  ]\n}"
+  }
+]

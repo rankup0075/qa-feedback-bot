@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "초반 이동속도가 조금 느린 느낌입니다. 크게 불편하진 않아요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"minor\",\n  \"summary\": \"초반 이동 속도가 느리게 느껴집니다.\",\n  \"reproSteps\": []\n}"
+  }
+]

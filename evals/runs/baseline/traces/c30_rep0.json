@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "도전과제 목록을 한눈에 볼 수 있는 기능이 있으면 좋겠습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"도전과제 목록을 한눈에 볼 수 있는 기능이 필요합니다.\",\n  \"reproSteps\": []\n}"
+  }
+]

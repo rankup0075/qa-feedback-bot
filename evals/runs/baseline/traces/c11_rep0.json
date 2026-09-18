@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "사람 많은 마을에서 프레임이 20까지 떨어집니다. 전투할 땐 괜찮아요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"사람 많은 마을에서 프레임이 저하됩니다.\",\n  \"reproSteps\": [\n    \"사람 많은 마을로 이동합니다.\",\n    \"게임 실행 중 프레임 수를 확인합니다.\"\n  ]\n}"
+  }
+]

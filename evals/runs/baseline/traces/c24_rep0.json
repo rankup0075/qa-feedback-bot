@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "설정에서 키 변경하는 메뉴를 못 찾겠습니다. 있긴 한 건가요?"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"설정 메뉴에서 키 변경 기능이 찾기 어려움\",\n  \"reproSteps\": [\n    \"설정 메뉴에 들어간다\",\n    \"키 변경 옵션을 찾으려 한다\"\n  ]\n}"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "run": "baseline",
+  "provider": "ollama",
+  "model": "qwen3:8b",
+  "cases": 33,
+  "reps": 1,
+  "rows": 33,
+  "errors": 0,
+  "category_accuracy": 0.8484848484848485,
+  "severity_accuracy": 0.7575757575757576,
+  "both_accuracy": 0.6060606060606061,
+  "category_ci95": 0.1223345642505572,
+  "avg_latency_s": 1.7893939393939393,
+  "at": "2026-09-18T21:03:08.221Z"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "한글 폰트가 영문 폰트보다 작게 나와서 어색합니다. 크기만 맞춰주면 좋겠어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"한글 폰트가 영문 폰트보다 작아 어색함\",\n  \"reproSteps\": [\n    \"게임 내 텍스트를 확인\",\n    \"한글 폰트와 영문 폰트의 크기를 비교\"\n  ]\n}"
+  }
+]

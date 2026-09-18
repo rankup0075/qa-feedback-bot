@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "설정 화면에 '해상돗'이라고 오타가 있어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"설정 화면에 '해상 Desmond' 오타가 있음\",\n  \"reproSteps\": []\n}"
+  }
+]

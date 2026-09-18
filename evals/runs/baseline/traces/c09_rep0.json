@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "스킬 쿨타임이 UI에는 0인데 실제로는 아직 안 돌아옵니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"bug\",\n  \"severity\": \"major\",\n  \"summary\": \"스킬 쿨타임이 UI에 0으로 표시되지만 실제는 작동하지 않음\",\n  \"reproSteps\": [\n    \"스킬을 사용한 후 쿨타임이 0으로 표시됨\",\n    \"스킬을 다시 시도했으나 쿨타임이 지나지 않은 것처럼 작동하지 않음\"\n  ]\n}"
+  }
+]

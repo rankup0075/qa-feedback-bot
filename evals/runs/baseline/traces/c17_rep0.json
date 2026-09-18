@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "궁수 캐릭터가 너무 셉니다. 다른 직업을 쓸 이유가 없어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"major\",\n  \"summary\": \"궁수 캐릭터의 강력함이 다른 직업을 사용하게 만들지 않음\",\n  \"reproSteps\": []\n}"
+  }
+]

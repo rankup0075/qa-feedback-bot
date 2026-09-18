@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "NPC가 대화가 끝나고 나면 벽을 보고 서 있습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"other\",\n  \"severity\": \"minor\",\n  \"summary\": \"NPC 대화 후 벽을 보고 서 있는 현상\",\n  \"reproSteps\": [\n    \"NPC와 대화를 시작합니다.\",\n    \"대화가 끝나고 NPC의 위치를 확인합니다.\",\n    \"NPC가 벽을 보고 서 있는지 확인합니다.\"\n  ]\n}"
+  }
+]

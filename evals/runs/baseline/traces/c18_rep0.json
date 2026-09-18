@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "후반부 골드 수급이 너무 적어서 장비를 살 수가 없습니다. 파밍만 몇 시간째예요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"balance\",\n  \"severity\": \"minor\",\n  \"summary\": \"후반부 골드 수급이 부족해 장비 구매가 어려움\",\n  \"reproSteps\": [\n    \"후반부 진행 시 골드 수급 확인\",\n    \"장비 구매 시 부족한 골드 확인\"\n  ]\n}"
+  }
+]
