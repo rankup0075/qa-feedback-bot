@@ -1,4 +1,5 @@
-import { ClassifyError, getClassifier } from "@/lib/classify";
+import { getLlm, LlmError } from "@/lib/llm";
+import { classify } from "@/lib/qa/classify";
 
 export async function POST(req: Request) {
   let feedback: unknown;
@@ -13,11 +14,16 @@ export async function POST(req: Request) {
   }
 
   try {
-    const classifier = getClassifier();
-    const { result, usage, provider, model } = await classifier.classify(feedback);
-    return Response.json({ result, usage, provider, model });
+    const llm = getLlm();
+    const { data, usage } = await classify(llm, feedback);
+    return Response.json({
+      result: data,
+      usage,
+      provider: llm.provider,
+      model: llm.model,
+    });
   } catch (e) {
-    if (e instanceof ClassifyError) {
+    if (e instanceof LlmError) {
       console.error(e.message, e.cause);
       return Response.json({ error: e.message }, { status: e.status });
     }

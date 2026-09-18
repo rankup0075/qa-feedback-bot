@@ -1,39 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-import type { ClassifyResult } from "@/lib/classify/types";
+import { CategoryBadge, SeverityBadge } from "@/components/Badges";
+import type { ClassifyResult } from "@/lib/qa/classify";
 
 type ApiResponse = {
   result: ClassifyResult;
   usage: { inputTokens: number; outputTokens: number };
   provider: string;
   model: string;
-};
-
-const CATEGORY_LABEL: Record<ClassifyResult["category"], string> = {
-  bug: "버그",
-  balance: "밸런스",
-  ux: "사용성",
-  other: "기타",
-};
-
-const CATEGORY_STYLE: Record<ClassifyResult["category"], string> = {
-  bug: "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200",
-  balance: "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200",
-  ux: "bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-200",
-  other: "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
-};
-
-const SEVERITY_LABEL: Record<ClassifyResult["severity"], string> = {
-  critical: "치명적",
-  major: "중요",
-  minor: "경미",
-};
-
-const SEVERITY_STYLE: Record<ClassifyResult["severity"], string> = {
-  critical: "bg-red-600 text-white",
-  major: "bg-orange-500 text-white",
-  minor: "bg-zinc-500 text-white",
 };
 
 const SAMPLES = [
@@ -83,6 +59,12 @@ export default function Home() {
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           플레이테스터 피드백을 붙여넣으면 AI가 분류하고 재현 단계를 정리해줍니다.
         </p>
+        <Link
+          href="/batch"
+          className="mt-3 inline-block text-sm font-medium text-sky-600 hover:underline dark:text-sky-400"
+        >
+          여러 개 한 번에 분석하기 →
+        </Link>
       </header>
 
       <section>
@@ -94,7 +76,6 @@ export default function Home() {
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}
           onKeyDown={(e) => {
-            // Ctrl+Enter로도 제출
             if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) classify();
           }}
           rows={5}
@@ -138,16 +119,8 @@ export default function Home() {
       {data && (
         <section className="mt-8 rounded-xl border border-zinc-200 p-5 dark:border-zinc-800">
           <div className="flex flex-wrap items-center gap-2">
-            <span
-              className={`rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_STYLE[data.result.category]}`}
-            >
-              {CATEGORY_LABEL[data.result.category]}
-            </span>
-            <span
-              className={`rounded-full px-3 py-1 text-xs font-semibold ${SEVERITY_STYLE[data.result.severity]}`}
-            >
-              {SEVERITY_LABEL[data.result.severity]}
-            </span>
+            <CategoryBadge value={data.result.category} />
+            <SeverityBadge value={data.result.severity} />
           </div>
 
           <h2 className="mt-4 text-base font-semibold">{data.result.summary}</h2>
