@@ -1,4 +1,5 @@
 import { createAnthropicProvider } from "./anthropic";
+import { createGeminiProvider } from "./gemini";
 import { createOllamaProvider } from "./ollama";
 import { LlmError, type LlmProvider } from "./types";
 
@@ -10,17 +11,22 @@ let cached: LlmProvider | null = null;
  * 어떤 모델을 쓸지 고른다.
  *
  * - CLASSIFIER_PROVIDER가 있으면 그걸 따른다
- * - 없으면 ANTHROPIC_API_KEY가 있을 때 anthropic, 아니면 ollama
+ * - 없으면 키가 있는 클라우드 모델을, 그것도 없으면 로컬 ollama를 쓴다
  *
- * 덕분에 개발은 로컬 모델로 공짜로 하고, 키를 넣는 순간
- * 코드 수정 없이 Claude로 넘어간다.
+ * 개발은 로컬 모델로 공짜로 하고, 배포된 서버에서는 키만 넣으면
+ * 코드 수정 없이 클라우드 모델로 넘어간다. Ollama는 이 컴퓨터에서만
+ * 돌기 때문에 Vercel 같은 곳에서는 쓸 수 없다.
  */
 export function getLlm(): LlmProvider {
   if (cached) return cached;
 
   const provider =
     process.env.CLASSIFIER_PROVIDER ??
-    (process.env.ANTHROPIC_API_KEY ? "anthropic" : "ollama");
+    (process.env.ANTHROPIC_API_KEY
+      ? "anthropic"
+      : process.env.GEMINI_API_KEY
+        ? "gemini"
+        : "ollama");
 
   switch (provider) {
     case "ollama":
@@ -29,9 +35,12 @@ export function getLlm(): LlmProvider {
     case "anthropic":
       cached = createAnthropicProvider();
       break;
+    case "gemini":
+      cached = createGeminiProvider();
+      break;
     default:
       throw new LlmError(
-        `알 수 없는 CLASSIFIER_PROVIDER: ${provider} (ollama 또는 anthropic)`,
+        `알 수 없는 CLASSIFIER_PROVIDER: ${provider} (ollama · gemini · anthropic)`,
         500,
       );
   }

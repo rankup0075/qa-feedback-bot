@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CategoryBadge, SeverityBadge } from "@/components/Badges";
+import { DemoNotice } from "@/components/DemoNotice";
 import type { ClassifyResult } from "@/lib/qa/classify";
 
 type ApiResponse = {
@@ -10,6 +11,7 @@ type ApiResponse = {
   usage: { inputTokens: number; outputTokens: number };
   provider: string;
   model: string;
+  demoReason?: string;
 };
 
 const SAMPLES = [
@@ -141,10 +143,20 @@ export default function Home() {
           </div>
 
           <footer className="mt-5 border-t border-zinc-200 pt-3 text-xs text-zinc-500 dark:border-zinc-800">
-            {data.provider} · {data.model} · 토큰 {data.usage.inputTokens} in /{" "}
-            {data.usage.outputTokens} out
+            {data.provider === "demo" ? (
+              <>미리 계산된 결과 · {data.model}</>
+            ) : (
+              <>
+                {data.provider} · {data.model} · 토큰 {data.usage.inputTokens} in /{" "}
+                {data.usage.outputTokens} out
+              </>
+            )}
           </footer>
         </section>
+      )}
+
+      {data?.provider === "demo" && (
+        <DemoNotice model={data.model} reason={data.demoReason} />
       )}
     </main>
   );

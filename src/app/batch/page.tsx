@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { CategoryBadge, SeverityBadge } from "@/components/Badges";
+import { DemoNotice } from "@/components/DemoNotice";
 import type { Category, ClassifyResult } from "@/lib/qa/classify";
 import type { IssueGroup } from "@/lib/qa/group";
 import {
@@ -39,7 +40,11 @@ export default function BatchPage() {
   const [items, setItems] = useState<Item[]>([]);
   const [groups, setGroups] = useState<IssueGroup[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [meta, setMeta] = useState<{ provider: string; model: string } | null>(null);
+  const [meta, setMeta] = useState<{
+    provider: string;
+    model: string;
+    demoReason?: string;
+  } | null>(null);
   const [open, setOpen] = useState<number | null>(null);
 
   const lines = useMemo(
@@ -87,7 +92,11 @@ export default function BatchPage() {
           setPhase({ kind: "idle" });
           return;
         }
-        setMeta({ provider: json.provider, model: json.model });
+        setMeta({
+          provider: json.provider,
+          model: json.model,
+          demoReason: json.demoReason,
+        });
         collected.push({ feedback: lines[i], result: json.result });
         setItems([...collected]);
       } catch {
@@ -304,8 +313,14 @@ export default function BatchPage() {
 
           {meta && (
             <p className="mt-6 text-xs text-zinc-500">
-              {meta.provider} · {meta.model} · 피드백 {items.length}건 분류 후 묶기
+              {meta.provider === "demo"
+                ? `미리 계산된 결과 · ${meta.model}`
+                : `${meta.provider} · ${meta.model} · 피드백 ${items.length}건 분류 후 묶기`}
             </p>
+          )}
+
+          {meta?.provider === "demo" && (
+            <DemoNotice model={meta.model} reason={meta.demoReason} />
           )}
         </>
       )}
