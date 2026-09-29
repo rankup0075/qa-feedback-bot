@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "파티 모집 글 올리는 버튼을 못 찾아서 30분을 헤맸습니다. 결국 커뮤니티를 검색해서 알았어요."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"파티 모집 글 올리는 버튼 위치가 불명확해 사용자 혼란\",\n  \"reproSteps\": []\n}"
+  }
+]

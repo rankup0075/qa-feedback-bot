@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "장비 비교 창에서 어느 쪽이 지금 착용 중인지 표시가 없어 헷갈립니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"장비 비교 창에서 현재 착용 중인 장비를 표시하지 않아 혼란스러움\",\n  \"reproSteps\": []\n}"
+  }
+]

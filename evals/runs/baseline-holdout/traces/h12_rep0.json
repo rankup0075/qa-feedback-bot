@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "퀘스트 보상 목록이 아이콘만 나와서 마우스를 올려봐야 뭔지 알 수 있습니다."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"category\": \"ux\",\n  \"severity\": \"minor\",\n  \"summary\": \"퀘스트 보상 목록의 아이콘만 표시되어 내용 확인이 불편합니다.\",\n  \"reproSteps\": []\n}"
+  }
+]
